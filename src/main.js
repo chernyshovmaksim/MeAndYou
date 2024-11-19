@@ -2,6 +2,6 @@ import "./style.css";
 
 import $ from "jquery";
 
-window.onload = () => {
-  console.log($);
-};
+$(document).ready((e) => {
+	console.log("Page is loadded");
+});
