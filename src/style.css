@@ -21,3 +21,9 @@
 .mobile-nav {
 	background-color: rgba(0, 0, 0, 0.5);
 }
+
+.hero {
+	background-image: url("./assets/images/hero.webp");
+	background-size: cover;
+	background-position: center;
+}

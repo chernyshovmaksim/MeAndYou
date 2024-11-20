@@ -10,15 +10,14 @@
 	<body>
 		<!-- Wrapper для Mmenu -->
 		<div id="page" class="flex flex-col min-h-screen">
+			<!-- Шапка -->
 			<header class="header bg-gray-900 text-white py-4">
 				<div class="container mx-auto flex items-center">
 					<!-- Логотип -->
 					<a href="/" class="logo flex flex-col items-start justify-center">
 						<span class="font-black uppercase"> ME&YOU </span>
-						<span
-							class="text-xs font-bold font-serif text-pink-600 lowercase -mt-1"
-						>
-							Цветы
+						<span class="text-xs text-pink-600 uppercase -mt-1">
+							Студия флористики
 						</span>
 					</a>
 
@@ -37,7 +36,14 @@
 					<nav id="mmenu">
 						<ul>
 							<li><a href="/">Главная</a></li>
-							<li><span>Каталог</span></li>
+							<li>
+								<span>Каталог</span>
+								<ul>
+									<li><a href="/">item01</a></li>
+									<li><a href="/">item02</a></li>
+									<li><a href="/">item03</a></li>
+								</ul>
+							</li>
 							<li><a href="/">Оплата</a></li>
 							<li><a href="/">Доставка</a></li>
 							<li><a href="/">Контакты</a></li>
@@ -46,6 +52,13 @@
 				</div>
 			</header>
 
+			<!-- Главный экран -->
+			<section class="hero relative">
+				<div class="overlay"></div>
+				<div class="container min-h-[70vh]"></div>
+			</section>
+
+			<!-- Подвал -->
 			<footer class="footer mt-auto">
 				<div class="container">footer</div>
 			</footer>
