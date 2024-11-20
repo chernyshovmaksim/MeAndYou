@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
@@ -9,33 +9,51 @@
 	</head>
 	<body>
 		<!-- Wrapper для Mmenu -->
-		<div id="page" class="flex flex-col min-h-screen">
+		<div id="page" class="flex min-h-screen flex-col">
 			<!-- Шапка -->
-			<header class="header bg-gray-900 text-white py-4">
+			<header class="header bg-gray-900 py-4 text-white">
 				<div class="container mx-auto flex items-center">
 					<!-- Логотип -->
 					<a href="/" class="logo flex flex-col items-start justify-center">
 						<span class="font-black uppercase">Я&ТЫ</span>
-						<span class="text-xs text-pink-600 uppercase -mt-1">
+						<span class="-mt-1 text-[8px] uppercase text-pink-600">
 							Студия флористики
 						</span>
 					</a>
+					<!-- Контакты -->
+					<div class="ml-auto mr-12 hidden flex-col gap-1 text-xs md:flex">
+						<div class="flex items-center gap-2">
+							<span class="flex items-center gap-1">
+								<i data-feather="home" width="12px"></i>
+								<span>Адрес:</span>
+							</span>
+							<span>Ул.Советская 1</span>
+						</div>
+						<div class="-mt-2 flex items-center gap-1">
+							<i data-feather="phone-call" width="12px"></i>
+							<a href="tel://+79999999999">Тел:. +7 (999) 999-99-99</a>
+						</div>
+					</div>
 
+					<!-- Блок с иконкой карзины и избранного -->
+					<div class="ml-auto mr-12 flex items-center gap-4 md:ml-0">
+						<button class="cursor-pointer"><i data-feather="heart"></i></button>
+						<button class="cursor-pointer">
+							<i data-feather="shopping-cart"></i>
+						</button>
+					</div>
 					<!-- Мобильная навигация -->
 					<!-- Бургер кнопка -->
-					<a
-						href="#menu"
-						class="hamburger ml-auto w-6 h-4 flex flex-col justify-between cursor-pointer"
-					>
-						<span></span>
-						<span></span>
-						<span></span>
+					<a href="#menu" class="cursor-pointer md:ml-0">
+						<i data-feather="menu" width="24px"></i>
 					</a>
 
 					<!-- Навигация -->
 					<nav id="mmenu">
 						<ul>
-							<li><a href="/">Главная</a></li>
+							<li>
+								<a href="/">Главная</a>
+							</li>
 							<li>
 								<span>Каталог</span>
 								<ul>
@@ -58,18 +76,18 @@
 			<section class="hero relative">
 				<div class="overlay"></div>
 				<div
-					class="container min-h-[50vh] text-white relative z-10 flex flex-col justify-center"
+					class="container relative z-10 flex min-h-[50vh] flex-col justify-center text-white"
 				>
 					<h1 class="text-xl">
 						Доставка цветов в <span class="font-bold">Оренбурге</span>
 					</h1>
 					<h3 class="text-xs">А также: игрушки, подарки, шары.</h3>
-					<div class="flex items-center gap-2 mt-4">
-						<button class="btn px-4 py-1 rounded bg-pink-600 text-xs">
+					<div class="mt-4 flex items-center gap-2">
+						<button class="btn rounded bg-pink-600 px-4 py-1 text-xs">
 							Каталог
 						</button>
 						<button
-							class="btn px-4 py-1 border-[1px] rounded border-white text-xs"
+							class="btn rounded border-[1px] border-white px-4 py-1 text-xs"
 						>
 							Заказать звонок
 						</button>
