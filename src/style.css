@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-	@apply max-w-[1200px] px-2 mx-auto;
+	@apply max-w-[1120px] px-2 mx-auto;
 }
 
 /*
@@ -12,7 +12,7 @@
 
 .hamburger > span {
 	display: block;
-	height: 3px;
+	height: 2px;
 	width: 100%;
 	background-color: #fff;
 	border-radius: 1.5px;
@@ -26,4 +26,13 @@
 	background-image: url("./assets/images/hero.webp");
 	background-size: cover;
 	background-position: center;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
 }
