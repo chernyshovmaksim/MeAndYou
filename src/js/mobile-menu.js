@@ -5,6 +5,7 @@ const menu = new MmenuLight(document.querySelector("#mmenu"));
 
 const navigator = menu.navigation({
 	title: "ME&YOU",
+	theme: "dark",
 });
 const drawer = menu.offcanvas({
 	position: "right",

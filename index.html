@@ -10,15 +10,14 @@
 	<body>
 		<!-- Wrapper для Mmenu -->
 		<div id="page" class="flex flex-col min-h-screen">
+			<!-- Шапка -->
 			<header class="header bg-gray-900 text-white py-4">
 				<div class="container mx-auto flex items-center">
 					<!-- Логотип -->
 					<a href="/" class="logo flex flex-col items-start justify-center">
-						<span class="font-black uppercase"> ME&YOU </span>
-						<span
-							class="text-xs font-bold font-serif text-pink-600 lowercase -mt-1"
-						>
-							Цветы
+						<span class="font-black uppercase">Я&ТЫ</span>
+						<span class="text-xs text-pink-600 uppercase -mt-1">
+							Студия флористики
 						</span>
 					</a>
 
@@ -26,7 +25,7 @@
 					<!-- Бургер кнопка -->
 					<a
 						href="#menu"
-						class="hamburger ml-auto w-10 h-6 flex flex-col justify-between cursor-pointer"
+						class="hamburger ml-auto w-6 h-4 flex flex-col justify-between cursor-pointer"
 					>
 						<span></span>
 						<span></span>
@@ -37,7 +36,16 @@
 					<nav id="mmenu">
 						<ul>
 							<li><a href="/">Главная</a></li>
-							<li><span>Каталог</span></li>
+							<li>
+								<span>Каталог</span>
+								<ul>
+									<li><a href="/">Ко дню матери</a></li>
+									<li><a href="/">Сборные букеты</a></li>
+									<li><a href="/">Букеты из роз</a></li>
+									<li><a href="/">Коробочки</a></li>
+									<li><a href="/">Авторские композиции</a></li>
+								</ul>
+							</li>
 							<li><a href="/">Оплата</a></li>
 							<li><a href="/">Доставка</a></li>
 							<li><a href="/">Контакты</a></li>
@@ -46,6 +54,30 @@
 				</div>
 			</header>
 
+			<!-- Главный экран -->
+			<section class="hero relative">
+				<div class="overlay"></div>
+				<div
+					class="container min-h-[50vh] text-white relative z-10 flex flex-col justify-center"
+				>
+					<h1 class="text-xl">
+						Доставка цветов в <span class="font-bold">Оренбурге</span>
+					</h1>
+					<h3 class="text-xs">А также: игрушки, подарки, шары.</h3>
+					<div class="flex items-center gap-2 mt-4">
+						<button class="btn px-4 py-1 rounded bg-pink-600 text-xs">
+							Каталог
+						</button>
+						<button
+							class="btn px-4 py-1 border-[1px] rounded border-white text-xs"
+						>
+							Заказать звонок
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Подвал -->
 			<footer class="footer mt-auto">
 				<div class="container">footer</div>
 			</footer>
