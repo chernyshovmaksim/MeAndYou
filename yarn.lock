@@ -679,6 +679,11 @@ minimatch@^9.0.4:
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.1.2.tgz#93a9626ce5e5e66bd4db86849e7515e92340a707"
   integrity sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==
 
+mmenu-light@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/mmenu-light/-/mmenu-light-3.2.2.tgz#5932be3146b0d4001c13cb4544583862a4bbae69"
+  integrity sha512-Ue+3+ZIF500IWNPgojHRbIhl8ikMxuPnFBpb+I8bL5fg5ODFOctOEAhA7aZmfjvWvtC+8v0ik3y6aTvgX/QXTQ==
+
 mz@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"

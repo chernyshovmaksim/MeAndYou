@@ -5,61 +5,62 @@
 		<!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Me&You</title>
-
 		<script type="module" src="./src/main.js" defer></script>
 	</head>
 	<body>
-		<header class="header bg-gray-900 text-white py-4">
-			<div class="container mx-auto flex items-center">
-				<!-- Логотип -->
-				<a href="/" class="logo flex flex-col items-start justify-center">
-					<span class="font-black uppercase"> ME&YOU </span>
-					<span
-						class="text-xs font-bold font-serif text-pink-600 lowercase -mt-1"
-					>
-						Цветы
-					</span>
-				</a>
+		<!-- Wrapper для Mmenu -->
+		<div id="page">
+			<header class="header bg-gray-900 text-white py-4">
+				<div class="container mx-auto flex items-center">
+					<!-- Логотип -->
+					<a href="/" class="logo flex flex-col items-start justify-center">
+						<span class="font-black uppercase"> ME&YOU </span>
+						<span
+							class="text-xs font-bold font-serif text-pink-600 lowercase -mt-1"
+						>
+							Цветы
+						</span>
+					</a>
 
-				<!-- Десктопная навигация -->
-				<nav class="nav ml-auto hidden">
-					<ul class="flex items-center gap-2 uppercase text-xs">
-						<li><a href="/">Главная</a></li>
-						<li><a href="/">Каталог</a></li>
-						<li><a href="/">Оплата</a></li>
-						<li><a href="/">Доставка</a></li>
-						<li><a href="/">Контакты</a></li>
-					</ul>
-				</nav>
-
-				<!-- Мобильная навигация -->
-				<!-- Гамбургер кнопка -->
-				<div
-					class="hamburger ml-auto w-10 h-6 flex flex-col justify-between cursor-pointer"
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-
-				<!-- Навигация -->
-				<aside class="mobile-nav fixed top-0 right-0 w-full h-screen z-50">
-					<div
-						class="fixed h-screen overflow-y-scroll w-2/3 bg-white right-0 top-0 text-black p-4"
-					>
-						<div id="close-bar">
-							<div class="cursor-pointer w-8 h-8"></div>
-						</div>
-						<ul>
+					<!-- Десктопная навигация -->
+					<nav class="ml-auto hidden">
+						<ul class="flex items-center gap-2 uppercase text-xs">
 							<li><a href="/">Главная</a></li>
 							<li><a href="/">Каталог</a></li>
 							<li><a href="/">Оплата</a></li>
 							<li><a href="/">Доставка</a></li>
 							<li><a href="/">Контакты</a></li>
 						</ul>
-					</div>
-				</aside>
-			</div>
-		</header>
+					</nav>
+
+					<!-- Мобильная навигация -->
+					<!-- Гамбургер кнопка -->
+					<a
+						href="#menu"
+						class="hamburger ml-auto w-10 h-6 flex flex-col justify-between cursor-pointer"
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+
+					<!-- Навигация -->
+					<nav id="menu">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li>
+								<span>About us</span>
+								<ul>
+									<li><a href="/">History</a></li>
+									<li><a href="/">The team</a></li>
+									<li><a href="/">Our address</a></li>
+								</ul>
+							</li>
+							<li><a href="/">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
 	</body>
 </html>
