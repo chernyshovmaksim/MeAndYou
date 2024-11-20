@@ -8,11 +8,13 @@ $(document).ready((e) => {
 	console.log("Page is loadded");
 
 	const menu = new MmenuLight(
-		document.querySelector("#menu"),
+		document.querySelector("#mmenu"),
 		"(max-width: 600px)"
 	);
 
-	const navigator = menu.navigation();
+	const navigator = menu.navigation({
+		title: "ME&YOU",
+	});
 	const drawer = menu.offcanvas({
 		position: "right",
 	});

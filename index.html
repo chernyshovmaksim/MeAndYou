@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<!-- Wrapper для Mmenu -->
-		<div id="page">
+		<div id="page" class="flex flex-col min-h-screen">
 			<header class="header bg-gray-900 text-white py-4">
 				<div class="container mx-auto flex items-center">
 					<!-- Логотип -->
@@ -22,19 +22,8 @@
 						</span>
 					</a>
 
-					<!-- Десктопная навигация -->
-					<nav class="ml-auto hidden">
-						<ul class="flex items-center gap-2 uppercase text-xs">
-							<li><a href="/">Главная</a></li>
-							<li><a href="/">Каталог</a></li>
-							<li><a href="/">Оплата</a></li>
-							<li><a href="/">Доставка</a></li>
-							<li><a href="/">Контакты</a></li>
-						</ul>
-					</nav>
-
 					<!-- Мобильная навигация -->
-					<!-- Гамбургер кнопка -->
+					<!-- Бургер кнопка -->
 					<a
 						href="#menu"
 						class="hamburger ml-auto w-10 h-6 flex flex-col justify-between cursor-pointer"
@@ -45,7 +34,7 @@
 					</a>
 
 					<!-- Навигация -->
-					<nav id="menu">
+					<nav id="mmenu">
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li>
@@ -61,6 +50,10 @@
 					</nav>
 				</div>
 			</header>
+
+			<footer class="footer mt-auto">
+				<div class="container">footer</div>
+			</footer>
 		</div>
 	</body>
 </html>
