@@ -4,8 +4,8 @@ import "mmenu-light/dist/mmenu-light.css";
 const menu = new MmenuLight(document.querySelector("#mmenu"));
 
 const navigator = menu.navigation({
-	title: "ME&YOU",
-	theme: "dark",
+	title: "Я&ТЫ",
+	// theme: "dark",
 });
 const drawer = menu.offcanvas({
 	position: "right",

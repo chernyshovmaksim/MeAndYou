@@ -19,6 +19,7 @@
   "dependencies": {
     "feather-icons": "^4.29.2",
     "jquery": "4.0.0-beta",
-    "mmenu-light": "^3.2.2"
+    "mmenu-light": "^3.2.2",
+    "swiper": "^11.1.15"
   }
 }

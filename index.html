@@ -7,7 +7,7 @@
 		<title>Me&You</title>
 		<script type="module" src="./src/main.js" defer></script>
 	</head>
-	<body>
+	<body class="bg-white">
 		<!-- Wrapper для Mmenu -->
 		<div id="page" class="flex min-h-screen flex-col">
 			<!-- Шапка -->
@@ -37,9 +37,11 @@
 
 					<!-- Блок с иконкой карзины и избранного -->
 					<div class="ml-auto mr-12 flex items-center gap-4 md:ml-0">
-						<button class="cursor-pointer"><i data-feather="heart"></i></button>
 						<button class="cursor-pointer">
-							<i data-feather="shopping-cart"></i>
+							<i data-feather="heart" class="w-5"></i>
+						</button>
+						<button class="cursor-pointer">
+							<i data-feather="shopping-cart" class="w-5"></i>
 						</button>
 					</div>
 					<!-- Мобильная навигация -->
@@ -57,7 +59,14 @@
 							<li>
 								<span>Каталог</span>
 								<ul>
-									<li><a href="/">Ко дню матери</a></li>
+									<li>
+										<span>Ко дню матери</span>
+										<ul>
+											<li><a href="/">Букеты из Хризантем</a></li>
+											<li><a href="/">Светлые букеты</a></li>
+											<li><a href="/">Розы</a></li>
+										</ul>
+									</li>
 									<li><a href="/">Сборные букеты</a></li>
 									<li><a href="/">Букеты из роз</a></li>
 									<li><a href="/">Коробочки</a></li>
@@ -76,24 +85,443 @@
 			<section class="hero relative">
 				<div class="overlay"></div>
 				<div
-					class="container relative z-10 flex min-h-[30vh] flex-col justify-center text-white"
+					class="container relative z-10 flex min-h-[30vh] flex-col justify-center text-white md:min-h-[50vh]"
 				>
 					<h1 class="text-xl">
-						Доставка цветов в <span class="font-bold">Оренбурге</span>
+						Букеты и композиции в <span class="font-bold">Оренбурге</span>
 					</h1>
 					<h3 class="text-xs">А также: игрушки, подарки, шары.</h3>
 					<div class="mt-4 flex items-center gap-2">
-						<button class="btn rounded bg-pink-600 px-4 py-1 text-xs">
-							Каталог
+						<button
+							class="btn flex items-center gap-2 rounded border-[1px] border-pink-600 bg-pink-600 px-4 py-1 text-xs"
+						>
+							<span
+								><img
+									src="./src/assets/icons/catalog.svg"
+									class="invert"
+									alt="Каталог"
+									width="24px"
+							/></span>
+							<span>Каталог</span>
 						</button>
 						<button
-							class="btn rounded border-[1px] border-white px-4 py-1 text-xs"
+							class="btn flex items-center gap-2 rounded border-[1px] border-gray-500 bg-[rgba(0,0,0,.5)] px-4 py-1 text-xs"
 						>
-							Заказать звонок
+							<i data-feather="phone-forwarded" width="24px"></i>
+							<span>Заказать звонок</span>
 						</button>
 					</div>
 				</div>
 			</section>
+
+			<!-- Категории -->
+			<section class="categories">
+				<div class="container">
+					<h2 class="mt-4 text-2xl font-bold">Доставка цветов в Оренбурге</h2>
+				</div>
+				<div class="container mt-2">
+					<!-- Slider main container -->
+					<div class="swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper items-stretch">
+							<!-- Slides -->
+							<div
+								class="swiper-slide h-auto overflow-hidden rounded-xl border-[1px] border-gray-900"
+							>
+								<div class="flex items-center">
+									<div
+										class="flex h-full flex-1 items-center p-2 text-sm font-semibold"
+									>
+										<p>Бережная доставка в коробке от 3000₽.</p>
+									</div>
+									<div class="flex h-[20vh] flex-1 flex-grow md:h-[30vh]">
+										<img
+											src="src/assets/images/carousel/2.webp"
+											class="object-cover"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div
+								class="swiper-slide h-auto overflow-hidden rounded-xl border-[1px] border-gray-900"
+							>
+								<div class="flex items-center">
+									<div
+										class="flex h-full flex-1 items-center p-2 text-sm font-semibold"
+									>
+										<p>Фото до отправки, в Telegram или в WhatsApp</p>
+									</div>
+									<div class="flex h-[20vh] flex-1 flex-grow md:h-[30vh]">
+										<img
+											src="src/assets/images/carousel/1.jpg"
+											class="object-cover"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<!-- <div class="swiper-pagination"></div> -->
+
+						<!-- If we need navigation buttons -->
+						<!-- <div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div> -->
+
+						<!-- If we need scrollbar -->
+						<!-- <div class="swiper-scrollbar"></div> -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Продукты -->
+			<section class="products mt-8">
+				<div class="container">
+					<h3 class="text-xl font-light">Букеты с бережной доставкой</h3>
+				</div>
+				<div class="container mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/2.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/"> Вкус детства </a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/1.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+							<div
+								class="absolute bottom-0 left-0 mb-2 ml-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs text-white"
+							>
+								Новинка
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/">Семейный очаг</a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/4.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/"> Вкус детства </a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/3.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-pink-600"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+							<div
+								class="absolute bottom-0 left-0 mb-2 ml-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs text-white"
+							>
+								Новинка
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/">Семейный очаг</a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/2.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/"> Вкус детства </a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/1.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+							<div
+								class="absolute bottom-0 left-0 mb-2 ml-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs text-white"
+							>
+								Новинка
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/">Семейный очаг</a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/4.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,0,0,.5)]"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/"> Вкус детства </a>
+						</div>
+					</div>
+
+					<div class="product">
+						<div class="relative h-48 w-full overflow-hidden md:h-80">
+							<a href="/">
+								<img
+									src="src/assets/images/products/3.webp"
+									class="object-cover"
+									alt=""
+								/>
+							</a>
+							<div
+								class="absolute right-0 top-0 mr-2 mt-2 flex h-10 w-10 items-center justify-center rounded-full bg-pink-600"
+							>
+								<i data-feather="heart" class="text-white"></i>
+							</div>
+							<div
+								class="absolute bottom-0 left-0 mb-2 ml-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs text-white"
+							>
+								Новинка
+							</div>
+						</div>
+						<div class="flex items-center justify-between py-2 font-semibold">
+							<span>3850 ₽</span>
+							<a
+								href="/"
+								class="flex cursor-pointer items-center justify-center rounded bg-pink-600 px-4 py-2"
+							>
+								<span class="hidden text-xs text-white md:inline-block"
+									>Купить</span
+								>
+								<i
+									data-feather="shopping-cart"
+									class="invert md:hidden"
+									width="14px"
+								></i>
+							</a>
+						</div>
+						<div class="text-xs">
+							<a href="/">Семейный очаг</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bottom bar -->
+			<section
+				class="bottom-bar fixed bottom-0 left-0 hidden w-full bg-gray-900 p-4 transition transition-all md:hidden"
+			>
+				<div class="flex items-end justify-center gap-4">
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<img
+							src="src/assets/icons/catalog.svg"
+							class="invert"
+							width="18px"
+							alt=""
+						/>
+						<span class="text-xs">Каталог</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="home" width="18px"></i>
+						<span class="text-xs">Главная</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="heart" width="18px"></i>
+						<span class="text-xs">Избранное</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="shopping-cart" width="18px"></i>
+						<span class="text-xs">Корзина</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- Сепаратор -->
+			<div class="my-8"></div>
 
 			<!-- Подвал -->
 			<footer class="footer mt-auto bg-gray-900">
