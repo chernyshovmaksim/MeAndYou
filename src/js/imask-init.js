@@ -1,11 +1,13 @@
 import IMask from "imask";
 
 const imaskInit = () => {
-	const element = document.getElementById("phoneInput");
-	const maskOptions = {
-		mask: "+{7} (000) 000-00-00",
-	};
-	const mask = IMask(element, maskOptions);
+	IMask(document.getElementById("phoneInput"), {
+		mask: "+{7}(000)000-00-00",
+	});
+
+	IMask(document.getElementById("actionInput"), {
+		mask: "+{7}(000)000-00-00",
+	});
 };
 // phoneInput
 
