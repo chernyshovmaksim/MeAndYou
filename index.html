@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Me&You</title>
+		<title>Цветы и подарки с доставков в Оренбурге от ME&YOU</title>
 		<script type="module" src="./src/main.js" defer></script>
 	</head>
 	<body class="bg-white">
@@ -105,6 +105,7 @@
 							<span>Каталог</span>
 						</button>
 						<button
+							id="callback-modal-init"
 							class="btn flex items-center gap-2 rounded border-[1px] border-gray-500 bg-[rgba(0,0,0,.5)] px-4 py-1 text-xs"
 						>
 							<i data-feather="phone-forwarded" width="24px"></i>
@@ -529,6 +530,45 @@
 					&copy; by ME&YOU
 				</div>
 			</footer>
+
+			<div
+				id="callback-modal"
+				class="fixed left-0 top-0 z-50 hidden h-full w-full"
+			>
+				<div
+					class="modal-overlay absolute left-0 top-0 flex h-screen w-full items-center justify-center"
+				>
+					<div
+						class="modal-bg flex w-4/5 flex-col rounded bg-white p-4 shadow-2xl"
+					>
+						<div class="flex w-full justify-end">
+							<i id="close-modal" data-feather="x"></i>
+						</div>
+						<h3 class="w-full text-center text-xl">Обратный звонок</h3>
+						<div class="mt-2 flex flex-col gap-2">
+							<input
+								class="rounded border-[1px] border-gray-700 p-2"
+								type="text"
+								required
+								minlength="2"
+								name="name"
+								placeholder="Ваше имя"
+							/>
+							<input
+								id="phoneInput"
+								class="rounded border-[1px] border-gray-700 p-2"
+								type="text"
+								required
+								name="phone"
+								placeholder="+7 (999) 999-99-99"
+							/>
+							<button class="rounded bg-pink-600 px-4 py-2 text-xs text-white">
+								Отправить заявку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

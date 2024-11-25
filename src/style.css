@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-	@apply max-w-[1120px] px-2 mx-auto;
+	@apply mx-auto max-w-[1120px] px-2;
 }
 
 /*
@@ -35,4 +35,7 @@
 	bottom: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.8);
 }
