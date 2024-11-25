@@ -2,9 +2,6 @@ import $ from "jquery";
 
 const BottomBar = () => {
 	$(document).on("scroll", () => {
-		let footerHeight = $(".footer").outerHeight();
-		let bottomBarHeight = $(".bottom-bar").outerHeight();
-
 		if ($(document).scrollTop() > 80) {
 			$(".bottom-bar").removeClass("hidden");
 		} else {
