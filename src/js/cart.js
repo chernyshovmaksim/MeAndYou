@@ -30,7 +30,6 @@ const cartInit = () => {
 	});
 
 	cartIconInHeader.on("click", (e) => {
-		// e.preventDefault();
 		openCart();
 	});
 
@@ -40,7 +39,6 @@ const cartInit = () => {
 	});
 
 	cartClose.on("click", (e) => {
-		// e.preventDefault();
 		closeCart();
 	});
 };
