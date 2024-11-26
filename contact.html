@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Каталог цветов и подарков с доставков в Оренбурге от ME&YOU</title>
+		<script type="module" src="./src/main.js" defer></script>
+		<script src="https://api-maps.yandex.ru/v3/?apikey=2a168b1c-2517-4a7e-af58-6919de7e1a58&lang=ru_RU"></script>
+	</head>
+	<body class="bg-white">
+		<!-- Wrapper для Mmenu -->
+		<div id="page" class="flex min-h-screen flex-col">
+			<!-- Шапка -->
+			<header class="header bg-white py-4 text-gray-950">
+				<div class="container mx-auto flex items-center">
+					<!-- Логотип -->
+					<a href="/" class="logo flex flex-col items-start justify-center">
+						<span class="font-black uppercase">Я&ТЫ</span>
+						<span class="-mt-1 text-[8px] uppercase text-pink-600">
+							Студия флористики
+						</span>
+					</a>
+					<!-- Контакты -->
+					<div class="ml-auto mr-12 hidden flex-col gap-1 text-xs md:flex">
+						<div class="flex items-center gap-2">
+							<span class="flex items-center gap-1">
+								<i data-feather="home" width="12px"></i>
+								<span>Адрес:</span>
+							</span>
+							<span>Ул.Советская 1</span>
+						</div>
+						<div class="-mt-2 flex items-center gap-1">
+							<i data-feather="phone-call" width="12px"></i>
+							<a href="tel://+79999999999">Тел:. +7 (999) 999-99-99</a>
+						</div>
+					</div>
+
+					<!-- Блок с иконкой карзины и избранного -->
+					<div class="ml-auto mr-12 flex items-center gap-4 md:ml-0">
+						<button class="cursor-pointer">
+							<i data-feather="heart" class="w-5"></i>
+						</button>
+						<button class="cursor-pointer">
+							<i data-feather="shopping-cart" class="w-5"></i>
+						</button>
+					</div>
+					<!-- Мобильная навигация -->
+					<!-- Бургер кнопка -->
+					<a href="#menu" class="cursor-pointer md:ml-0">
+						<i data-feather="menu" width="24px"></i>
+					</a>
+
+					<!-- Навигация -->
+					<nav id="mmenu">
+						<ul>
+							<li>
+								<a href="/">Главная</a>
+							</li>
+							<li>
+								<span>Каталог</span>
+								<ul>
+									<li>
+										<span>Ко дню матери</span>
+										<ul>
+											<li><a href="/">Букеты из Хризантем</a></li>
+											<li><a href="/">Светлые букеты</a></li>
+											<li><a href="/">Розы</a></li>
+										</ul>
+									</li>
+									<li><a href="/">Сборные букеты</a></li>
+									<li><a href="/">Букеты из роз</a></li>
+									<li><a href="/">Коробочки</a></li>
+									<li><a href="/">Авторские композиции</a></li>
+								</ul>
+							</li>
+							<li><a href="/">Оплата</a></li>
+							<li><a href="/">Доставка</a></li>
+							<li><a href="/">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<section class="mt-8">
+				<div class="container">
+					<h2 class="text-xl font-bold">Контакты</h2>
+				</div>
+			</section>
+
+			<section class="map mt-8">
+				<div id="map" class="w-full" style="height: 400px"></div>
+			</section>
+			<section class="action">
+				<div
+					class="container flex h-[60vh] flex-col justify-center text-white md:h-[30vh] md:max-w-80"
+				>
+					<div
+						class="rounded-tl rounded-tr bg-gray-900 p-1 font-bold uppercase"
+					>
+						БЕСПЛАТНАЯ ДОСТАВКА
+					</div>
+					<div class="bg-gray-900 p-1 text-xs">При заказе от 5000 руб</div>
+					<div class="bg-gray-900 p-1 text-xs">
+						Оставь заявку и заберите подарок
+					</div>
+					<div>
+						<input
+							id="actionInput"
+							class="w-full rounded-bl rounded-br border-[1px] border-gray-700 p-2"
+							type="text"
+							required
+							name="actionInput"
+							placeholder="+7 (999) 999-99-99"
+						/>
+					</div>
+					<div>
+						<button
+							class="mt-2 w-full rounded bg-pink-600 px-4 py-2 text-xs text-white"
+						>
+							Отправить заявку
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bottom bar -->
+			<section
+				class="bottom-bar fixed bottom-0 left-0 hidden w-full bg-gray-900 px-4 py-2 transition-all md:hidden"
+			>
+				<div class="flex items-end justify-center gap-4">
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<img
+							src="src/assets/icons/catalog.svg"
+							class="invert"
+							width="18px"
+							alt=""
+						/>
+						<span class="text-xs">Каталог</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="home" width="18px"></i>
+						<span class="text-xs">Главная</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="heart" width="18px"></i>
+						<span class="text-xs">Избранное</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="shopping-cart" width="18px"></i>
+						<span class="text-xs">Корзина</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- Подвал -->
+			<footer class="footer mt-auto bg-gray-900">
+				<div class="container my-4 text-xs uppercase text-white opacity-50">
+					<div class="t-text t-descr_sm" field="text">
+						<span>Наш Адрес:</span>
+						г. Оренбург, Советская 1 <br /><span>Телефон:</span
+						><a href="tel:+79999999999">+7 (999) 999-99-99</a>
+						<br />
+						<br /><span>WhatsApp:</span>+7 (999) 999-99-99
+						<br />
+						<br /><a href="/">Наши Вакансии</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
