@@ -14,7 +14,7 @@ const swiper = new Swiper(".swiper", {
 			slidesPerView: 2.3,
 		},
 		640: {
-			slidesPerView: 4.3,
+			slidesPerView: 3.3,
 		},
 	},
 	// configure Swiper to use modules

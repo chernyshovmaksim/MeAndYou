@@ -37,11 +37,21 @@
 
 					<!-- Блок с иконкой карзины и избранного -->
 					<div class="ml-auto mr-12 flex items-center gap-4 md:ml-0">
-						<button class="cursor-pointer">
+						<button class="relative cursor-pointer">
 							<i data-feather="heart" class="w-5"></i>
+							<div
+								class="absolute -right-3 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+							>
+								2
+							</div>
 						</button>
-						<button class="cursor-pointer">
+						<button class="relative cursor-pointer" id="cart-icon-in-header">
 							<i data-feather="shopping-cart" class="w-5"></i>
+							<div
+								class="absolute -right-3 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+							>
+								5
+							</div>
 						</button>
 					</div>
 					<!-- Мобильная навигация -->
@@ -74,7 +84,7 @@
 								</ul>
 							</li>
 							<li><a href="/">Оплата</a></li>
-							<li><a href="/">Доставка</a></li>
+							<li><a href="/contact.html">Доставка</a></li>
 							<li><a href="/">Контакты</a></li>
 						</ul>
 					</nav>
@@ -127,6 +137,42 @@
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper items-stretch">
 							<!-- Slides -->
+							<div
+								class="swiper-slide h-auto overflow-hidden rounded-xl border-[1px] border-gray-900"
+							>
+								<div class="flex items-center">
+									<div
+										class="flex h-full flex-1 items-center p-2 text-sm font-semibold"
+									>
+										<p>Бережная доставка в коробке от 3000₽.</p>
+									</div>
+									<div class="flex h-[20vh] flex-1 flex-grow md:h-[30vh]">
+										<img
+											src="src/assets/images/carousel/2.webp"
+											class="object-cover"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div
+								class="swiper-slide h-auto overflow-hidden rounded-xl border-[1px] border-gray-900"
+							>
+								<div class="flex items-center">
+									<div
+										class="flex h-full flex-1 items-center p-2 text-sm font-semibold"
+									>
+										<p>Фото до отправки, в Telegram или в WhatsApp</p>
+									</div>
+									<div class="flex h-[20vh] flex-1 flex-grow md:h-[30vh]">
+										<img
+											src="src/assets/images/carousel/1.jpg"
+											class="object-cover"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
 							<div
 								class="swiper-slide h-auto overflow-hidden rounded-xl border-[1px] border-gray-900"
 							>
@@ -493,6 +539,7 @@
 				</div>
 			</section>
 
+			<!-- Призыв к действию -->
 			<section class="action mt-8">
 				<div
 					class="container flex h-[60vh] flex-col justify-center text-white md:h-[30vh] md:max-w-80"
@@ -547,13 +594,30 @@
 						<i data-feather="home" width="18px"></i>
 						<span class="text-xs">Главная</span>
 					</a>
-					<a href="/" class="flex flex-col items-center gap-2 text-white">
+					<a
+						href="/"
+						class="relative flex flex-col items-center gap-2 text-white"
+					>
 						<i data-feather="heart" width="18px"></i>
 						<span class="text-xs">Избранное</span>
+						<div
+							class="absolute -top-3 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+						>
+							2
+						</div>
 					</a>
-					<a href="/" class="flex flex-col items-center gap-2 text-white">
+					<a
+						href="/"
+						id="cart-icon-in-bottom-bar"
+						class="relative flex flex-col items-center gap-2 text-white"
+					>
 						<i data-feather="shopping-cart" width="18px"></i>
 						<span class="text-xs">Корзина</span>
+						<div
+							class="absolute -top-3 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+						>
+							5
+						</div>
 					</a>
 				</div>
 			</section>
@@ -576,6 +640,7 @@
 				</div>
 			</footer>
 
+			<!-- Модалка запроса обратного звонка -->
 			<div
 				id="callback-modal"
 				class="fixed left-0 top-0 z-50 hidden h-full w-full"
@@ -614,6 +679,109 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Корзина с товарами -->
+			<section
+				id="cart-wrapper"
+				class="fixed -right-full top-0 z-50 h-screen w-full bg-[rgba(0,0,0,.5)]"
+			>
+				<div
+					id="cart"
+					class="absolute -right-full top-0 h-screen w-4/5 bg-white p-2 shadow shadow-black transition-all md:w-2/6"
+				>
+					<div class="flex items-end justify-between border-b py-2">
+						<span id="cart-close"> Закрыть </span>
+						<span class="text-xl font-light uppercase">Корзина</span>
+					</div>
+
+					<div class="rounded bg-green-200 px-2 py-2 text-xs">
+						Товаров: <span class="font-bold">2 шт.</span><br />На сумму:
+						<span class="font-black">5000 ₽</span>
+					</div>
+
+					<div class="mt-4 w-full" id="cart-products">
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

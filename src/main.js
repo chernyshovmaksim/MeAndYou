@@ -9,6 +9,7 @@ import "./js/swiper-init";
 import BottomBar from "./js/bottom-bar";
 import callbackModals from "./js/modals";
 import imaskInit from "./js/imask-init";
+import cartInit from "./js/cart";
 
 $(document).ready((e) => {
 	feather.replace();
@@ -16,4 +17,5 @@ $(document).ready((e) => {
 	BottomBar();
 	callbackModals();
 	imaskInit();
+	cartInit();
 });
