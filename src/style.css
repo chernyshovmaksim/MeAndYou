@@ -5,6 +5,9 @@
 .container {
 	@apply mx-auto max-w-[1120px] px-2;
 }
+p {
+	@apply py-2;
+}
 
 /*
 * Стили компонентов
@@ -44,4 +47,7 @@
 	background-image: url("./assets/images/action.png");
 	background-position: center;
 	background-size: cover;
+}
+.swiper-pagination-bullet-active {
+	background: rgb(219 39 119 / var(--tw-bg-opacity, 1)) !important;
 }

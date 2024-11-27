@@ -5,8 +5,9 @@ import feather from "feather-icons";
 
 import "./js/mobile-menu";
 import "./js/swiper-init";
+import "./js/fancyapps-init";
 
-import BottomBar from "./js/bottom-bar";
+import bottomBar from "./js/bottom-bar";
 import callbackModals from "./js/modals";
 import imaskInit from "./js/imask-init";
 import cartInit from "./js/cart";
@@ -14,7 +15,7 @@ import cartInit from "./js/cart";
 $(document).ready((e) => {
 	feather.replace();
 
-	BottomBar();
+	bottomBar();
 	callbackModals();
 	imaskInit();
 	cartInit();

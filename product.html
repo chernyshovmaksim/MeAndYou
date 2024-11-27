@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Цветы и подарки с доставков в Оренбурге от ME&YOU</title>
+		<script type="module" src="./src/main.js" defer></script>
+	</head>
+	<body class="bg-white">
+		<!-- Wrapper для Mmenu -->
+		<div id="page" class="flex min-h-screen flex-col">
+			<!-- Шапка -->
+			<header class="header bg-white py-4 text-gray-950">
+				<div class="container mx-auto flex items-center">
+					<!-- Логотип -->
+					<a href="/" class="logo flex flex-col items-start justify-center">
+						<span class="font-black uppercase">Я&ТЫ</span>
+						<span class="-mt-1 text-[8px] uppercase text-pink-600">
+							Студия флористики
+						</span>
+					</a>
+					<!-- Контакты -->
+					<div class="ml-auto mr-12 hidden flex-col gap-1 text-xs md:flex">
+						<div class="flex items-center gap-2">
+							<span class="flex items-center gap-1">
+								<i data-feather="home" width="12px"></i>
+								<span>Адрес:</span>
+							</span>
+							<span>Ул.Советская 1</span>
+						</div>
+						<div class="-mt-2 flex items-center gap-1">
+							<i data-feather="phone-call" width="12px"></i>
+							<a href="tel://+79999999999">Тел:. +7 (999) 999-99-99</a>
+						</div>
+					</div>
+
+					<!-- Блок с иконкой карзины и избранного -->
+					<div class="ml-auto mr-12 flex items-center gap-4 md:ml-0">
+						<button class="relative cursor-pointer">
+							<i data-feather="heart" class="w-5"></i>
+							<div
+								class="absolute -right-3 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+							>
+								2
+							</div>
+						</button>
+						<button class="relative cursor-pointer" id="cart-icon-in-header">
+							<i data-feather="shopping-cart" class="w-5"></i>
+							<div
+								class="absolute -right-3 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+							>
+								5
+							</div>
+						</button>
+					</div>
+					<!-- Мобильная навигация -->
+					<!-- Бургер кнопка -->
+					<a href="#menu" class="cursor-pointer md:ml-0">
+						<i data-feather="menu" width="24px"></i>
+					</a>
+
+					<!-- Навигация -->
+					<nav id="mmenu">
+						<ul>
+							<li>
+								<a href="/">Главная</a>
+							</li>
+							<li>
+								<span>Каталог</span>
+								<ul>
+									<li>
+										<span>Ко дню матери</span>
+										<ul>
+											<li><a href="/">Букеты из Хризантем</a></li>
+											<li><a href="/">Светлые букеты</a></li>
+											<li><a href="/">Розы</a></li>
+										</ul>
+									</li>
+									<li><a href="/">Сборные букеты</a></li>
+									<li><a href="/">Букеты из роз</a></li>
+									<li><a href="/">Коробочки</a></li>
+									<li><a href="/">Авторские композиции</a></li>
+								</ul>
+							</li>
+							<li><a href="/">Оплата</a></li>
+							<li><a href="/contact.html">Доставка</a></li>
+							<li><a href="/">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<section id="product">
+				<div id="product-container" class="container flex w-full flex-col">
+					<div id="product-name">
+						<h2 class="mt-4 text-xl md:text-2xl">Нежность и элегантность</h2>
+					</div>
+
+					<div id="product-flex" class="flex flex-col sm:flex-row">
+						<div class="w-full sm:w-1/4">
+							<div id="product-photos">
+								<div class="swiper" id="product-gallery">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<a
+												href="src/assets/images/products/1.webp"
+												data-fancybox="product-gallery"
+											>
+												<img
+													src="src/assets/images/products/1.webp"
+													class="min-h-52 w-full object-cover"
+													alt=""
+												/>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a
+												href="src/assets/images/products/1.webp"
+												data-fancybox="product-gallery"
+											>
+												<img
+													src="src/assets/images/products/1.webp"
+													class="min-h-52 w-full object-cover"
+													alt=""
+												/>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a
+												href="src/assets/images/products/1.webp"
+												data-fancybox="product-gallery"
+											>
+												<img
+													src="src/assets/images/products/1.webp"
+													class="min-h-52 w-full object-cover"
+													alt=""
+												/>
+											</a>
+										</div>
+									</div>
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							id="product-infoblock"
+							class="flex flex-1 flex-col md:p-2 md:pt-0"
+						>
+							<div
+								id="product-price"
+								class="mt-4 py-2 text-center text-4xl font-black uppercase md:mt-0 md:text-left"
+							>
+								2500 ₽
+							</div>
+							<div id="product-buttons" class="mt-2 flex items-center gap-2">
+								<div
+									class="flex flex-1 flex-grow cursor-pointer items-center gap-1 rounded bg-gray-900 px-4 py-2 text-xs text-white"
+								>
+									<span><i data-feather="heart"></i></span>
+									<span class="flex-1 text-center">Добавить в избранное</span>
+								</div>
+								<div
+									class="flex flex-1 flex-grow cursor-pointer items-center rounded bg-pink-600 px-4 py-2 text-xs text-white"
+								>
+									<span><i data-feather="heart"></i></span>
+									<span class="flex-1 text-center">Добавить в корзину</span>
+								</div>
+							</div>
+							<div id="product-description" class="mt-2">
+								<p>
+									Ищете идеальный подарок для особого случая или просто хотите
+									порадовать близких красивым букетом? Букет из белых хризантем,
+									отличающийся изысканностью и благородством, станет прекрасным
+									дополнением к любому интерьеру, подарит радость и хорошее
+									настроение, а светлый оттенок лепестков добавит ему нежности.
+									Закажите букет прямо сейчас и подарите близким частичку своего
+									тепла.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Призыв к действию -->
+			<section class="action mt-8">
+				<div
+					class="container flex h-[40vh] flex-col justify-center text-white md:h-[30vh] md:max-w-80"
+				>
+					<div
+						class="rounded-tl rounded-tr bg-gray-900 p-1 font-bold uppercase"
+					>
+						БЕСПЛАТНАЯ ДОСТАВКА
+					</div>
+					<div class="bg-gray-900 p-1 text-xs">При заказе от 5000 руб</div>
+					<div class="bg-gray-900 p-1 text-xs">
+						Оставь заявку и заберите подарок
+					</div>
+					<div>
+						<input
+							id="actionInput"
+							class="w-full rounded-bl rounded-br border-[1px] border-gray-700 p-2"
+							type="text"
+							required
+							name="actionInput"
+							placeholder="+7 (999) 999-99-99"
+						/>
+					</div>
+					<div>
+						<button
+							class="mt-2 w-full rounded bg-pink-600 px-4 py-2 text-xs text-white"
+						>
+							Отправить заявку
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bottom bar -->
+			<section
+				class="bottom-bar fixed bottom-0 left-0 hidden w-full bg-gray-900 px-4 py-2 transition-all md:hidden"
+			>
+				<div class="flex items-end justify-center gap-4">
+					<a
+						href="/catalog.html"
+						class="flex flex-col items-center gap-2 text-white"
+					>
+						<img
+							src="src/assets/icons/catalog.svg"
+							class="invert"
+							width="18px"
+							alt=""
+						/>
+						<span class="text-xs">Каталог</span>
+					</a>
+					<a href="/" class="flex flex-col items-center gap-2 text-white">
+						<i data-feather="home" width="18px"></i>
+						<span class="text-xs">Главная</span>
+					</a>
+					<a
+						href="/"
+						class="relative flex flex-col items-center gap-2 text-white"
+					>
+						<i data-feather="heart" width="18px"></i>
+						<span class="text-xs">Избранное</span>
+						<div
+							class="absolute -top-3 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+						>
+							2
+						</div>
+					</a>
+					<a
+						href="/"
+						id="cart-icon-in-bottom-bar"
+						class="relative flex flex-col items-center gap-2 text-white"
+					>
+						<i data-feather="shopping-cart" width="18px"></i>
+						<span class="text-xs">Корзина</span>
+						<div
+							class="absolute -top-3 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 text-xs text-white"
+						>
+							5
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- Сепаратор -->
+			<!-- <div class="my-8"></div> -->
+
+			<!-- Подвал -->
+			<footer class="footer mt-auto bg-gray-900">
+				<div class="container my-4 text-xs uppercase text-white opacity-50">
+					<div class="t-text t-descr_sm" field="text">
+						<span>Наш Адрес:</span>
+						г. Оренбург, Северный проезд 9/1 <br /><span>Телефон:</span
+						><a href="tel:+79999999999">+7 (999) 999-99-99</a>
+						<br />
+						<br /><span>WhatsApp:</span>+7 (999) 999-99-99
+						<br />
+						<br /><a href="/">Наши Вакансии</a>
+					</div>
+				</div>
+			</footer>
+
+			<!-- Корзина с товарами -->
+			<section
+				id="cart-wrapper"
+				class="fixed -right-full top-0 z-50 h-screen w-full bg-[rgba(0,0,0,.5)]"
+			>
+				<div
+					id="cart"
+					class="absolute -right-full top-0 h-screen w-4/5 bg-white p-2 shadow shadow-black transition-all md:w-2/6"
+				>
+					<div class="flex items-end justify-between border-b py-2">
+						<span id="cart-close"> Закрыть </span>
+						<span class="text-xl font-light uppercase">Корзина</span>
+					</div>
+
+					<div class="rounded bg-green-200 px-2 py-2 text-xs">
+						Товаров: <span class="font-bold">2 шт.</span><br />На сумму:
+						<span class="font-black">5000 ₽</span>
+					</div>
+
+					<div class="mt-4 w-full" id="cart-products">
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
