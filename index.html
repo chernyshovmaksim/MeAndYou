@@ -621,7 +621,7 @@
 							<i id="close-modal" data-feather="x"></i>
 						</div>
 						<h3 class="w-full text-center text-xl">Обратный звонок</h3>
-						<div class="mt-2 flex flex-col gap-2">
+						<form class="mt-2 flex flex-col gap-2">
 							<input
 								class="rounded border-[1px] border-gray-700 p-2"
 								type="text"
@@ -638,10 +638,13 @@
 								name="phoneInput"
 								placeholder="+7 (999) 999-99-99"
 							/>
-							<button class="rounded bg-pink-600 px-4 py-2 text-xs text-white">
+							<button
+								type="submit"
+								class="rounded bg-pink-600 px-4 py-2 text-xs text-white"
+							>
 								Отправить заявку
 							</button>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>

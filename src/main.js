@@ -7,6 +7,7 @@ import "./js/mobile-menu";
 import "./js/swiper-init";
 import "./js/fancyapps-init";
 import "./js/inputmask-init";
+import "./js/forms-init";
 
 import bottomBar from "./js/bottom-bar";
 import callbackModals from "./js/modals";
