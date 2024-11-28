@@ -1,4 +1,8 @@
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-Fancybox.bind("[data-fancybox]", {});
+const fancyboxInit = () => {
+	Fancybox.bind("[data-fancybox]", {});
+};
+
+export default fancyboxInit;
