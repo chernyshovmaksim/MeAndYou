@@ -656,17 +656,26 @@
 			>
 				<div
 					id="cart"
-					class="absolute -right-full top-0 h-screen w-4/5 bg-white p-2 shadow shadow-black transition-all md:w-2/6"
+					class="absolute -right-full top-0 min-h-screen w-4/5 bg-white p-2 shadow shadow-black transition-all md:w-2/6"
 				>
-					<div class="flex items-end justify-between border-b py-2">
+					<div
+						class="flex cursor-pointer items-end justify-between border-b py-2"
+					>
 						<span id="cart-close"> Закрыть </span>
-						<span class="text-xl font-light uppercase">Корзина</span>
+						<span class="cursor-pointer text-xl font-light uppercase"
+							>Корзина</span
+						>
 					</div>
 
 					<div class="rounded bg-green-200 px-2 py-2 text-xs">
 						Товаров: <span class="font-bold">2 шт.</span><br />На сумму:
 						<span class="font-black">5000 ₽</span>
 					</div>
+					<a
+						href="/"
+						class="mt-2 flex w-full rounded bg-pink-600 p-2 text-center text-sm font-bold text-white shadow"
+						>Оформить заказ</a
+					>
 
 					<div class="mt-4 w-full" id="cart-products">
 						<div class="mt-4 rounded bg-gray-100 p-2">
@@ -718,6 +727,198 @@
 							</div>
 						</div>
 
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 rounded bg-gray-100 p-2">
+							<div class="my-4 flex w-full items-center justify-end">
+								<div class="h-6 min-w-6 rounded-full bg-gray-900">
+									<i
+										id="close-modal"
+										class="text-[8px] text-white"
+										data-feather="x"
+									></i>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<a href="/" class="h-10 min-w-10">
+									<img
+										src="./src/assets/images/products/1.webp"
+										class="h-10 w-10 object-cover"
+										alt=""
+									/>
+								</a>
+								<a href="/" class="text-xs text-pink-600 underline"
+									>Наименование букета или композиции</a
+								>
+
+								<span
+									class="flex h-8 min-w-8 items-center justify-center rounded-full bg-pink-600 text-white"
+									>2</span
+								>
+							</div>
+							<div class="mt-1 rounded bg-gray-200 p-1 text-xs">
+								2500₽ X 2 = 5000₽
+							</div>
+							<div class="mt-2 flex justify-center">
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-bl rounded-tl border-[1px] bg-gray-300"
+								>
+									+
+								</div>
+								<div
+									class="flex h-10 min-w-10 items-center justify-center border-[1px] bg-gray-300"
+								>
+									2
+								</div>
+								<div
+									class="flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-br rounded-tr border-[1px] bg-gray-300"
+								>
+									-
+								</div>
+							</div>
+						</div>
 						<div class="mt-4 rounded bg-gray-100 p-2">
 							<div class="my-4 flex w-full items-center justify-end">
 								<div class="h-6 min-w-6 rounded-full bg-gray-900">

@@ -9,6 +9,11 @@ const inputmaskInit = () => {
 			im.mask(e);
 		});
 	}
+
+	if (document.querySelector("#order-phone")) {
+		let orderPhoneMask = new Inputmask("+7(999)999-99-99");
+		orderPhoneMask.mask(document.querySelector("#order-phone"));
+	}
 };
 
 export default inputmaskInit;
