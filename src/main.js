@@ -53,4 +53,8 @@ $(document).ready((e) => {
 			swal("Товар успешно добавлен в избранное", "", "success");
 		}
 	});
+
+	$(document).on("order-data-updated.commerce", function (e) {
+		ym(99115720, "reachGoal", "sendOrder");
+	});
 });
